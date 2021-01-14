@@ -1,1 +1,0 @@
-# OpenGLCarousel_Tex-Anim

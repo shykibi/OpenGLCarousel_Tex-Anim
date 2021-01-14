@@ -1,16 +1,5 @@
 #version 330 core
 
-in  vec3 vColor;
-out vec4 outColor;
-
-void main() {
-
-    outColor = vec4(vColor, 1.0);
-
-}
-
-/*#version 330 core
-
 struct Light {
     vec3  position;
     vec3  direction;
@@ -42,7 +31,7 @@ struct Textures {
 
 #define NLD 1
 #define NLP 1
-#define NLF 2
+#define NLF 1
 
 uniform vec3     ucpos;
 uniform Light    ulightG;
@@ -157,4 +146,4 @@ vec3 funFocal(Light light, Material material, vec3 N, vec3 V) {
 
     return color;
 
-}*/
+}
