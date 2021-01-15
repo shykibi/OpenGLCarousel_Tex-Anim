@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/InformaticaGraficaSesiones/Sesiones/P3_/src/Model.cpp" "C:/InformaticaGraficaSesiones/Sesiones/P3_/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Model.cpp.obj"
-  "C:/InformaticaGraficaSesiones/Sesiones/P3_/src/Shaders.cpp" "C:/InformaticaGraficaSesiones/Sesiones/P3_/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Shaders.cpp.obj"
-  "C:/InformaticaGraficaSesiones/Sesiones/P3_/src/Texture.cpp" "C:/InformaticaGraficaSesiones/Sesiones/P3_/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Texture.cpp.obj"
-  "C:/InformaticaGraficaSesiones/Sesiones/P3_/src/main.cpp" "C:/InformaticaGraficaSesiones/Sesiones/P3_/cmake-build-debug/CMakeFiles/P3Ana.dir/src/main.cpp.obj"
+  "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Model.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Model.cpp.obj"
+  "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Shaders.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Shaders.cpp.obj"
+  "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Texture.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Texture.cpp.obj"
+  "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/main.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/CMakeFiles/P3Ana.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

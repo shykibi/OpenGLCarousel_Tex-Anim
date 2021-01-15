@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="P3Ana"/>
+		<Option title="OpenGLCarousel_Tex-Anim"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -17,57 +17,57 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="P3Ana">
-				<Option output="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/binary/P3Ana.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src"/>
-					<Add directory="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/../libraries/includes"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 P3Ana"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="P3Ana/fast">
-				<Option output="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/binary/P3Ana.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src"/>
-					<Add directory="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/../libraries/includes"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 P3Ana/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OpenGLCarousel_Tex-Anim">
+				<Option output="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/binary/OpenGLCarousel_Tex-Anim.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src"/>
+					<Add directory="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/../libraries/includes"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLCarousel_Tex-Anim"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OpenGLCarousel_Tex-Anim/fast">
+				<Option output="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/binary/OpenGLCarousel_Tex-Anim.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src"/>
+					<Add directory="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/../libraries/includes"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLCarousel_Tex-Anim/fast"/>
 					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -85,25 +85,25 @@
 			</Target>
 		</Build>
 		<Unit filename="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Model.cpp">
-			<Option target="P3Ana"/>
+			<Option target="OpenGLCarousel_Tex-Anim"/>
 		</Unit>
 		<Unit filename="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Model.h">
-			<Option target="P3Ana"/>
+			<Option target="OpenGLCarousel_Tex-Anim"/>
 		</Unit>
 		<Unit filename="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Shaders.cpp">
-			<Option target="P3Ana"/>
+			<Option target="OpenGLCarousel_Tex-Anim"/>
 		</Unit>
 		<Unit filename="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Shaders.h">
-			<Option target="P3Ana"/>
+			<Option target="OpenGLCarousel_Tex-Anim"/>
 		</Unit>
 		<Unit filename="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Texture.cpp">
-			<Option target="P3Ana"/>
+			<Option target="OpenGLCarousel_Tex-Anim"/>
 		</Unit>
 		<Unit filename="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Texture.h">
-			<Option target="P3Ana"/>
+			<Option target="OpenGLCarousel_Tex-Anim"/>
 		</Unit>
 		<Unit filename="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/main.cpp">
-			<Option target="P3Ana"/>
+			<Option target="OpenGLCarousel_Tex-Anim"/>
 		</Unit>
 		<Unit filename="C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
