@@ -32,7 +32,8 @@ void drawObjectTex(Model model, Textures textures, glm::mat4 P, glm::mat4 V, glm
 
 // Model Building Functions
 void drawPlaneWindow(glm::mat4 P, glm::mat4 V, glm::mat4 M);
-void drawPlane(glm::mat4 P, glm::mat4 V, glm::mat4 M);
+void drawFloor(glm::mat4 P, glm::mat4 V, glm::mat4 M);
+void drawFloorReverse(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawCone(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawHelix(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawCylinder(glm::mat4 P, glm::mat4 V, glm::mat4 M);
@@ -66,7 +67,6 @@ void drawExtreme(glm::mat4 P, glm::mat4 V, glm::mat4 M);
     Texture imgSquared;             //img6
     Texture imgSquaredNormal;       //img7
 
-
 // Lights and Materials
     // Lights
         #define   NLD 1
@@ -85,9 +85,10 @@ void drawExtreme(glm::mat4 P, glm::mat4 V, glm::mat4 M);
             Material  emerald;
 
         // Textures
-            Textures  texFloor; //la difusa es imgGravel, la specular(brillos) es la imgBlack_w_Cubes, ¿LA EMISIVA ES IMGlIGHTINGSPECULAR?
-            Textures  texBase;  //difusa imgSquares, normal imgSquaresNormal
-            Textures  texLights;    //imgMarble
+            Textures  texFloor;
+            Textures  texBase;
+            Textures  texLights;
+            Textures texFloorInverse;
 
 
 // Viewport
@@ -95,9 +96,9 @@ void drawExtreme(glm::mat4 P, glm::mat4 V, glm::mat4 M);
     int h = 500;
 
 // Animation Variables
-    float desZ            =  0.0;
-    float alphaX          =  40.0;
-    float alphaY          =  25.0;
+    float desZ            = 0.0;
+    float alphaX          = 40.0;
+    float alphaY          = 25.0;
     GLint speed           = 20;  // 20 ms
     bool timerIsActivated = true;
     float rotY            = 0.0;
@@ -107,8 +108,8 @@ void drawExtreme(glm::mat4 P, glm::mat4 V, glm::mat4 M);
     float movTop          = 1.3;
     float movX            = 0.0;
     float movZ            = 0.0;
-    float intensity       =  0.7;
-    float rotateLight     =  180.0;
+    float intensity       = 0.7;
+    float rotateLight     = 180.0;
     bool lightOn          = true;
     Light savedLight;
 
@@ -248,6 +249,12 @@ void funInit() {
     texFloor.normal    = 0;
     texFloor.shininess = 10.0;
 
+    texFloorInverse.diffuse   = imgGravel.getTexture();
+    texFloorInverse.specular  = imgNoEmissive.getTexture();
+    texFloorInverse.emissive  = imgLightingSpecular.getTexture();
+    texFloorInverse.normal    = 0;
+    texFloorInverse.shininess = 10.0;
+
     texBase.diffuse   = imgSquared.getTexture();
     texBase.specular  = imgLightingSpecular.getTexture();
     texBase.emissive  = imgNoEmissive.getTexture();
@@ -303,21 +310,19 @@ void funDisplay() {
 
     // Draw Scene
 
-    glm::mat4 R = glm::rotate(I, glm::radians(180.0f), glm::vec3(1.0, 0.0, 0.0));
     glm::mat4 T = glm::translate(I, glm::vec3(movX, 0.0, movZ));
     glm::mat4 T_sphere = glm::translate(I, glm::vec3(movX, movTop, movZ));
     glm::mat4 R_sphere = glm::rotate(I, glm::radians(rotY_b_t), glm::vec3(0, 1, 0));
 
-    drawModel(P,V,I*T);
     glEnable(GL_CULL_FACE);
-        drawPlane(P,V,I*R);
-        drawPlane(P,V,I);
+    drawModel(P,V,I*T);
+    drawFloor(P,V,I);
+    drawFloorReverse(P,V,I);
 
-    // Transparencies
     glDepthMask(GL_FALSE);
-        drawSphere(P,V,I*T_sphere*R_sphere);
+    drawSphere(P,V,I*T_sphere*R_sphere);
     glDisable(GL_CULL_FACE);
-        drawPlaneWindow(P,V,I);
+    drawPlaneWindow(P,V,I);
     glDepthMask(GL_TRUE);
 
     // Buffer Swap
@@ -372,6 +377,7 @@ void drawObjectTex(Model model, Textures textures, glm::mat4 P, glm::mat4 V, glm
 // ----------------------------------------------      Drawing Models Functions     ----------------------------------------------
 
 void drawPlaneWindow(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+
     glm::mat4 R90 = glm::rotate(I, glm::radians(-90.0f), glm::vec3(0, 0, 1));
     glm::mat4 S = glm::scale(I, glm::vec3(2.0, 1.0, 2.0));
     glm::mat4 T = glm::translate(I, glm::vec3(-2.0, 0.0, 0.0));
@@ -381,10 +387,18 @@ void drawPlaneWindow(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
 
 
-void drawPlane(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+void drawFloor(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
     glm::mat4 S = glm::scale(I, glm::vec3(2.0, 1.0, 2.0));
     drawObjectTex(plane, texFloor, P, V, M * S);
+
+}
+
+void drawFloorReverse(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+
+    glm::mat4 S = glm::scale(I, glm::vec3(2.0, 1.0, 2.0));
+    glm::mat4 R = glm::rotate(I, glm::radians(180.0f), glm::vec3(1.0, 0.0, 0.0));
+    drawObjectTex(plane, texFloorInverse, P, V, M * R * S);
 
 }
 
@@ -545,14 +559,14 @@ void controller(unsigned char key, int x, int y) {
             }
             break;
         case 'd':
-            if(intensity >= 0.0) {
-                intensity -= 0.2;
+            if(intensity > 0.0) {
+                intensity -= 0.1;
                 changeIntensity();
             }
             break;
         case 'D':
-            if (intensity <= 1.0) {
-                intensity += 0.2;
+            if (intensity < 0.7) {
+                intensity += 0.1;
                 changeIntensity();
             }
             break;
