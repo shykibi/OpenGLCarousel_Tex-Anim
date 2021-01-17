@@ -316,7 +316,7 @@ void funDisplay() {
     glm::mat4 R_sphere = glm::rotate(I, glm::radians(rotY_b_t), glm::vec3(0, 1, 0));
     glm::mat4 R = glm::rotate(I, glm::radians(180.0f), glm::vec3(0, 1, 0));
 
-    glEnable(GL_CULL_FACE);
+    glEnable(GL_CULL_FACE); //Culling starts
         drawModel(P,V,I*T);
         drawFloor(P,V,I);
 
