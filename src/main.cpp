@@ -32,6 +32,7 @@ void drawObjectTex(Model model, Textures textures, glm::mat4 P, glm::mat4 V, glm
 
 // Model Building Functions
 void drawPlaneWindow(glm::mat4 P, glm::mat4 V, glm::mat4 M);
+void drawPlaneWindowInverse(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawFloor(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawFloorReverse(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawCone(glm::mat4 P, glm::mat4 V, glm::mat4 M);
@@ -313,17 +314,22 @@ void funDisplay() {
     glm::mat4 T = glm::translate(I, glm::vec3(movX, 0.0, movZ));
     glm::mat4 T_sphere = glm::translate(I, glm::vec3(movX, movTop, movZ));
     glm::mat4 R_sphere = glm::rotate(I, glm::radians(rotY_b_t), glm::vec3(0, 1, 0));
+    glm::mat4 R = glm::rotate(I, glm::radians(180.0f), glm::vec3(0, 1, 0));
 
     glEnable(GL_CULL_FACE);
-    drawModel(P,V,I*T);
-    drawFloor(P,V,I);
-    drawFloorReverse(P,V,I);
+        drawModel(P,V,I*T);
+        drawFloor(P,V,I);
 
-    glDepthMask(GL_FALSE);
-    drawSphere(P,V,I*T_sphere*R_sphere);
-    glDisable(GL_CULL_FACE);
-    drawPlaneWindow(P,V,I);
-    glDepthMask(GL_TRUE);
+        glDepthMask(GL_FALSE);
+            drawSphere(P,V,I*T_sphere*R_sphere);
+            drawPlaneWindow(P,V,I);
+
+                glDisable(GL_DEPTH_TEST);
+                drawFloorReverse(P,V,I);
+                glEnable(GL_DEPTH_TEST);
+            drawPlaneWindowInverse(P,V,I);
+        glDepthMask(GL_TRUE);
+
 
     // Buffer Swap
     glutSwapBuffers();
@@ -385,6 +391,15 @@ void drawPlaneWindow(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
 }
 
+void drawPlaneWindowInverse(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+
+    glm::mat4 R90 = glm::rotate(I, glm::radians(-90.0f), glm::vec3(0, 0, 1));
+    glm::mat4 R180 = glm::rotate(I, glm::radians(180.0f), glm::vec3(1, 0, 0));
+    glm::mat4 S = glm::scale(I, glm::vec3(2.0, 1.0, 2.0));
+    glm::mat4 T = glm::translate(I, glm::vec3(-2.0, 0.0, 0.0));
+    drawObjectMat(plane, emerald, P, V, M * T * R90 * S*R180);
+
+}
 
 
 void drawFloor(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
