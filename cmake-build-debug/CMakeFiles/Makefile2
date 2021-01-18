@@ -63,16 +63,16 @@ RM = C:\Users\gonza\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.6682.181
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana
+CMAKE_SOURCE_DIR = C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/P3Ana.dir/all
+all: CMakeFiles/OpenGLCarousel_Tex-Anim.dir/all
 
 .PHONY : all
 
@@ -82,36 +82,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/P3Ana.dir/clean
+clean: CMakeFiles/OpenGLCarousel_Tex-Anim.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/P3Ana.dir
+# Target rules for target CMakeFiles/OpenGLCarousel_Tex-Anim.dir
 
 # All Build rule for target.
-CMakeFiles/P3Ana.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target P3Ana"
-.PHONY : CMakeFiles/P3Ana.dir/all
+CMakeFiles/OpenGLCarousel_Tex-Anim.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target OpenGLCarousel_Tex-Anim"
+.PHONY : CMakeFiles/OpenGLCarousel_Tex-Anim.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/P3Ana.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/P3Ana.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/P3Ana.dir/rule
+CMakeFiles/OpenGLCarousel_Tex-Anim.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/OpenGLCarousel_Tex-Anim.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/OpenGLCarousel_Tex-Anim.dir/rule
 
 # Convenience name for target.
-P3Ana: CMakeFiles/P3Ana.dir/rule
+OpenGLCarousel_Tex-Anim: CMakeFiles/OpenGLCarousel_Tex-Anim.dir/rule
 
-.PHONY : P3Ana
+.PHONY : OpenGLCarousel_Tex-Anim
 
 # clean rule for target.
-CMakeFiles/P3Ana.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/clean
-.PHONY : CMakeFiles/P3Ana.dir/clean
+CMakeFiles/OpenGLCarousel_Tex-Anim.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/clean
+.PHONY : CMakeFiles/OpenGLCarousel_Tex-Anim.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
@@ -120,7 +120,7 @@ CMakeFiles/P3Ana.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

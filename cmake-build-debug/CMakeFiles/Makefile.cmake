@@ -55,5 +55,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/P3Ana.dir/DependInfo.cmake"
+  "CMakeFiles/OpenGLCarousel_Tex-Anim.dir/DependInfo.cmake"
   )

@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Model.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Model.cpp.obj"
-  "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Shaders.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Shaders.cpp.obj"
-  "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Texture.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Texture.cpp.obj"
-  "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/main.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/cmake-build-debug/CMakeFiles/P3Ana.dir/src/main.cpp.obj"
+  "C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Model.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Model.cpp.obj"
+  "C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Shaders.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Shaders.cpp.obj"
+  "C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Texture.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/cmake-build-debug/CMakeFiles/P3Ana.dir/src/Texture.cpp.obj"
+  "C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/main.cpp" "C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/cmake-build-debug/CMakeFiles/P3Ana.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

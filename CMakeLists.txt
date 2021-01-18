@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-set(PROJECT_NAME P3Ana)
+set(PROJECT_NAME OpenGLCarousel_Tex-Anim)
 project(${PROJECT_NAME})
 set(CMAKE_CXX_STANDARD 14)
 

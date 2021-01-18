@@ -67,10 +67,10 @@ RM = C:\Users\gonza\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.6682.181
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana
+CMAKE_SOURCE_DIR = C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -126,22 +126,22 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named P3Ana
+# Target rules for targets named OpenGLCarousel_Tex-Anim
 
 # Build rule for target.
-P3Ana: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 P3Ana
-.PHONY : P3Ana
+OpenGLCarousel_Tex-Anim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 OpenGLCarousel_Tex-Anim
+.PHONY : OpenGLCarousel_Tex-Anim
 
 # fast build rule for target.
-P3Ana/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/build
-.PHONY : P3Ana/fast
+OpenGLCarousel_Tex-Anim/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/build
+.PHONY : OpenGLCarousel_Tex-Anim/fast
 
 src/Model.obj: src/Model.cpp.obj
 
@@ -149,7 +149,7 @@ src/Model.obj: src/Model.cpp.obj
 
 # target to build an object file
 src/Model.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Model.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Model.cpp.obj
 .PHONY : src/Model.cpp.obj
 
 src/Model.i: src/Model.cpp.i
@@ -158,7 +158,7 @@ src/Model.i: src/Model.cpp.i
 
 # target to preprocess a source file
 src/Model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Model.cpp.i
 .PHONY : src/Model.cpp.i
 
 src/Model.s: src/Model.cpp.s
@@ -167,7 +167,7 @@ src/Model.s: src/Model.cpp.s
 
 # target to generate assembly for a file
 src/Model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Model.cpp.s
 .PHONY : src/Model.cpp.s
 
 src/Shaders.obj: src/Shaders.cpp.obj
@@ -176,7 +176,7 @@ src/Shaders.obj: src/Shaders.cpp.obj
 
 # target to build an object file
 src/Shaders.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Shaders.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Shaders.cpp.obj
 .PHONY : src/Shaders.cpp.obj
 
 src/Shaders.i: src/Shaders.cpp.i
@@ -185,7 +185,7 @@ src/Shaders.i: src/Shaders.cpp.i
 
 # target to preprocess a source file
 src/Shaders.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Shaders.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Shaders.cpp.i
 .PHONY : src/Shaders.cpp.i
 
 src/Shaders.s: src/Shaders.cpp.s
@@ -194,7 +194,7 @@ src/Shaders.s: src/Shaders.cpp.s
 
 # target to generate assembly for a file
 src/Shaders.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Shaders.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Shaders.cpp.s
 .PHONY : src/Shaders.cpp.s
 
 src/Texture.obj: src/Texture.cpp.obj
@@ -203,7 +203,7 @@ src/Texture.obj: src/Texture.cpp.obj
 
 # target to build an object file
 src/Texture.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Texture.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Texture.cpp.obj
 .PHONY : src/Texture.cpp.obj
 
 src/Texture.i: src/Texture.cpp.i
@@ -212,7 +212,7 @@ src/Texture.i: src/Texture.cpp.i
 
 # target to preprocess a source file
 src/Texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Texture.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Texture.cpp.i
 .PHONY : src/Texture.cpp.i
 
 src/Texture.s: src/Texture.cpp.s
@@ -221,7 +221,7 @@ src/Texture.s: src/Texture.cpp.s
 
 # target to generate assembly for a file
 src/Texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/Texture.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/Texture.cpp.s
 .PHONY : src/Texture.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -230,7 +230,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -239,7 +239,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -248,7 +248,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P3Ana.dir\build.make CMakeFiles/P3Ana.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLCarousel_Tex-Anim.dir\build.make CMakeFiles/OpenGLCarousel_Tex-Anim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -259,7 +259,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... P3Ana
+	@echo ... OpenGLCarousel_Tex-Anim
 	@echo ... src/Model.obj
 	@echo ... src/Model.i
 	@echo ... src/Model.s
@@ -283,7 +283,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P C:\Users\gonza\CLionProjects\ComputerGraphics\practica3\P3Ana\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P C:\Users\gonza\CLionProjects\ComputerGraphics\OpenGLCarousel_Tex-Anim\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

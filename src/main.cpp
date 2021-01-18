@@ -32,9 +32,7 @@ void drawObjectTex(Model model, Textures textures, glm::mat4 P, glm::mat4 V, glm
 
 // Model Building Functions
 void drawPlaneWindow(glm::mat4 P, glm::mat4 V, glm::mat4 M);
-void drawPlaneWindowInverse(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawFloor(glm::mat4 P, glm::mat4 V, glm::mat4 M);
-void drawFloorReverse(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawCone(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawHelix(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 void drawCylinder(glm::mat4 P, glm::mat4 V, glm::mat4 M);
@@ -101,7 +99,7 @@ void drawExtreme(glm::mat4 P, glm::mat4 V, glm::mat4 M);
     float alphaX          = 40.0;
     float alphaY          = 25.0;
     GLint speed           = 20;  // 20 ms
-    bool timerIsActivated = true;
+    bool timerIsActivated = false;
     float rotY            = 0.0;
     float zoom            = 50.0;
     float rotY_b_t        = 0.0;
@@ -184,17 +182,17 @@ void funInit() {
     imgSquaredNormal.initTexture("resources/textures/img7.png");
 
     // Global Ambient Light
-    lightG.ambient        = glm::vec3(0.25, 0.25, 0.25);
+    lightG.ambient        = glm::vec3(0.3, 0.3, 0.3);
 
     // Directional Lights
     lightD[0].direction   = glm::vec3(0.0, -1.0, 0.0);
-    lightD[0].ambient     = glm::vec3( 0.2, 0.2, 0.2);
+    lightD[0].ambient     = glm::vec3( 0.1, 0.1, 0.1);
     lightD[0].diffuse     = glm::vec3( 0.7, 0.7, 0.7);
     lightD[0].specular    = glm::vec3( 0.7, 0.7, 0.7);
 
     // Positional Lights
     lightP[0].position    = glm::vec3(-1.5,0.2,0.0);
-    lightP[0].ambient     = glm::vec3(0.7, 0.7, 0.7);
+    lightP[0].ambient     = glm::vec3(0.2, 0.2, 0.2);
     lightP[0].diffuse     = glm::vec3(0.9, 0.9, 0.9);
     lightP[0].specular    = glm::vec3(0.9, 0.9, 0.9);
     lightP[0].c0          = 1.00;
@@ -204,11 +202,11 @@ void funInit() {
     // Focal Lights
     lightF[0].position    = glm::vec3(3.0,  3.0,  4.0);
     lightF[0].direction   = glm::vec3(-3.0, -3.0, -4.0);
-    lightF[0].ambient     = glm::vec3(0.7,  0.7,  0.7);
-    lightF[0].diffuse     = glm::vec3(1.25,  1.25,  1.25);
+    lightF[0].ambient     = glm::vec3(0.2,  0.2,  0.2);
+    lightF[0].diffuse     = glm::vec3(0.9,  0.9,  0.9);
     lightF[0].specular    = glm::vec3(0.9,  0.9,  0.9);
-    lightF[0].innerCutOff = 7.5;
-    lightF[0].outerCutOff = lightF[0].innerCutOff + 1.0;
+    lightF[0].innerCutOff = 7.75;
+    lightF[0].outerCutOff = lightF[0].innerCutOff + 0.25;
     lightF[0].c0          = 1.000;  //1.000
     lightF[0].c1          = 0.090;  //0.090
     lightF[0].c2          = 0.032;  //0.032
@@ -312,24 +310,22 @@ void funDisplay() {
     // Draw Scene
 
     glm::mat4 T = glm::translate(I, glm::vec3(movX, 0.0, movZ));
-    glm::mat4 T_sphere = glm::translate(I, glm::vec3(movX, movTop, movZ));
-    glm::mat4 R_sphere = glm::rotate(I, glm::radians(rotY_b_t), glm::vec3(0, 1, 0));
-    glm::mat4 R = glm::rotate(I, glm::radians(180.0f), glm::vec3(0, 1, 0));
 
-    glEnable(GL_CULL_FACE); //Culling starts
-        drawModel(P,V,I*T);
-        drawFloor(P,V,I);
+    // Activate Culling
+    glEnable(GL_CULL_FACE);
 
-        glDepthMask(GL_FALSE);
-            drawSphere(P,V,I*T_sphere*R_sphere);
-            drawPlaneWindow(P,V,I);
+    // Draw Opaque Objects with Polygon Offset to fix Z-Fighting
+    drawFloor(P,V,I);
+    glEnable(GL_POLYGON_OFFSET_FILL);
+    glPolygonOffset(1.0f, 1.0f);
+    drawModel(P,V,I*T);
+    glDisable(GL_POLYGON_OFFSET_FILL);
 
-                glDisable(GL_DEPTH_TEST);
-                drawFloorReverse(P,V,I);
-                glEnable(GL_DEPTH_TEST);
-            drawPlaneWindowInverse(P,V,I);
-        glDepthMask(GL_TRUE);
+    // Draw Transparent Objects
+    drawPlaneWindow(P,V,I);
 
+    // Deactivate Transparencies and Reactivate Depth Buffer Updates
+    glDepthMask(GL_TRUE);
 
     // Buffer Swap
     glutSwapBuffers();
@@ -385,34 +381,19 @@ void drawObjectTex(Model model, Textures textures, glm::mat4 P, glm::mat4 V, glm
 void drawPlaneWindow(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
     glm::mat4 R90 = glm::rotate(I, glm::radians(-90.0f), glm::vec3(0, 0, 1));
-    glm::mat4 S = glm::scale(I, glm::vec3(2.0, 1.0, 2.0));
-    glm::mat4 T = glm::translate(I, glm::vec3(-2.0, 0.0, 0.0));
-    drawObjectMat(plane, emerald, P, V, M * T * R90 * S);
-
-}
-
-void drawPlaneWindowInverse(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
-
-    glm::mat4 R90 = glm::rotate(I, glm::radians(-90.0f), glm::vec3(0, 0, 1));
     glm::mat4 R180 = glm::rotate(I, glm::radians(180.0f), glm::vec3(1, 0, 0));
     glm::mat4 S = glm::scale(I, glm::vec3(2.0, 1.0, 2.0));
     glm::mat4 T = glm::translate(I, glm::vec3(-2.0, 0.0, 0.0));
-    drawObjectMat(plane, emerald, P, V, M * T * R90 * S*R180);
+    drawObjectMat(plane, emerald, P, V, M * T * R90 * S);
+    drawObjectMat(plane, emerald, P, V, M * T * R90 * S * R180);
 
 }
-
 
 void drawFloor(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
     glm::mat4 S = glm::scale(I, glm::vec3(2.0, 1.0, 2.0));
-    drawObjectTex(plane, texFloor, P, V, M * S);
-
-}
-
-void drawFloorReverse(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
-
-    glm::mat4 S = glm::scale(I, glm::vec3(2.0, 1.0, 2.0));
     glm::mat4 R = glm::rotate(I, glm::radians(180.0f), glm::vec3(1.0, 0.0, 0.0));
+    drawObjectTex(plane, texFloor, P, V, M * S);
     drawObjectTex(plane, texFloorInverse, P, V, M * R * S);
 
 }
@@ -527,8 +508,13 @@ void drawBodyAndTop(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 void drawModel(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
     glm::mat4 R = glm::rotate(I, glm::radians(rotY_b_t), glm::vec3(0, 1, 0));
-    drawBase(P,V,M);
+    glm::mat4 T_sphere = glm::translate(I, glm::vec3(0, movTop, 0));
     drawBodyAndTop(P,V,M*R);
+    drawBase(P,V,M);
+
+    // Deactivate Depth Buffer Updates
+    glDepthMask(GL_FALSE);
+    drawSphere(P,V,M*T_sphere*R);
 
 }
 

@@ -1084,7 +1084,7 @@ OpenGL/glu.h
 GL/glu.h
 -
 
-C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Model.h
+C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Model.h
 iostream
 -
 vector
@@ -1102,7 +1102,7 @@ assimp/scene.h
 assimp/postprocess.h
 -
 
-C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Shaders.h
+C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Shaders.h
 iostream
 -
 fstream
@@ -1116,7 +1116,7 @@ glm/gtc/type_ptr.hpp
 glm/gtc/matrix_transform.hpp
 -
 
-C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Texture.h
+C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Texture.h
 iostream
 -
 ogl/glew.h
@@ -1124,7 +1124,7 @@ ogl/glew.h
 freeimage/freeImage.h
 -
 
-C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/main.cpp
+C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/main.cpp
 iostream
 -
 ogl/glew.h
@@ -1132,11 +1132,11 @@ ogl/glew.h
 ogl/freeglut.h
 -
 Shaders.h
-C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Shaders.h
+C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Shaders.h
 Model.h
-C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Model.h
+C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Model.h
 Texture.h
-C:/Users/gonza/CLionProjects/ComputerGraphics/practica3/P3Ana/src/Texture.h
+C:/Users/gonza/CLionProjects/ComputerGraphics/OpenGLCarousel_Tex-Anim/src/Texture.h
 sstream
 -
 
